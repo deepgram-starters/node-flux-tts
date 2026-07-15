@@ -27,14 +27,8 @@ Send JSON text frames on the `/api/tts` WebSocket:
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> This starter depends on `@deepgram/sdk` **>= 5.6.0** — the release that adds `client.speak.v2` streaming support ([deepgram-js-sdk#515](https://github.com/deepgram/deepgram-js-sdk/pull/515)). Until that version is published:
-> - install the SDK from the feature branch, or
-> - `pnpm link` a local build of the SDK, then run this app.
->
-> Also note this project's `.npmrc` sets `minimum-release-age=14400` (10 days); a brand-new SDK release may need that relaxed temporarily to install immediately after publish.
-
-You'll need a Deepgram API key — get one at [console.deepgram.com](https://console.deepgram.com/).
+- Node.js 24+ and pnpm
+- A Deepgram API key — get one at [console.deepgram.com](https://console.deepgram.com/).
 
 ## Local Development
 
@@ -69,14 +63,6 @@ Environment variables (see `sample.env`):
 | `SESSION_SECRET` | random per boot | Set in production for stable JWT signing. |
 
 The connection also accepts `model`, `encoding`, and `sample_rate` as query params on the `/api/tts` WebSocket.
-
-## Status / TODO
-
-This scaffold is **backend-first**. To reach parity with the other starters:
-
-- [ ] **Frontend** — add a `flux-tts-html` submodule (text input → play streamed audio), mirroring how `node-flux` uses `flux-html`. Then restore the parallel backend+frontend `[start]` in `deepgram.toml` and the Caddy + frontend multi-stage `deploy/Dockerfile`.
-- [ ] **Contracts** — add `run-flux-tts-app.sh` to [`deepgram/starter-contracts`](https://github.com/deepgram/starter-contracts) and wire the `contracts` submodule.
-- [ ] **Publish** — bump to the released `@deepgram/sdk` version once `speak.v2` ships.
 
 ## License
 

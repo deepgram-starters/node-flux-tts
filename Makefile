@@ -25,9 +25,6 @@ help:
 	@echo "  make clean             Remove node_modules and build artifacts"
 	@echo "  make status            Show git and submodule status"
 	@echo ""
-	@echo "NOTE: the frontend submodule (flux-tts-html) is not wired up yet."
-	@echo "      Backend-only targets work today; see README."
-	@echo ""
 
 # Check required prerequisites
 check-prereqs:
