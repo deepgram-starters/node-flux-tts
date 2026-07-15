@@ -1,0 +1,58 @@
+{
+  "name": "@deepgram/node-flux-tts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time streaming text-to-speech with Deepgram Flux (v2 speak)",
+  "main": "server.js",
+  "packageManager": "pnpm@10.0.0",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "node --no-deprecation server.js",
+    "start-backend": "nodemon --no-deprecation server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepgram-starters/node-flux-tts.git"
+  },
+  "keywords": [
+    "text-to-speech",
+    "tts",
+    "deepgram",
+    "streaming",
+    "flux",
+    "speak-v2"
+  ],
+  "author": "Deepgram DX Team <devrel@deepgram.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deepgram-starters/node-flux-tts/issues"
+  },
+  "homepage": "https://github.com/deepgram-starters/node-flux-tts#readme",
+  "dependencies": {
+    "@deepgram/sdk": "^5.6.0",
+    "cors": "2.8.5",
+    "dotenv": "17.2.3",
+    "express": "5.2.1",
+    "jsonwebtoken": "9.0.2",
+    "toml": "3.0.0",
+    "ws": "8.18.0"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.10"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
